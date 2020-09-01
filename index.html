@@ -1,0 +1,102 @@
+<style>
+    a{
+        text-decoration: none;
+            text-decoration-line: none;
+            text-decoration-style: solid;
+            text-decoration-color: currentColor;
+            text-decoration-thickness: auto;
+            padding-left:15px;
+    }
+    a:visited, a:link{
+        color:#000;
+    }
+
+    
+    
+    .left{
+        display: inline-block;
+        color: #000;
+        opacity: 0.75;
+    }
+
+    .left :hover, .right :hover{
+        text-decoration: underline;
+    }
+    .right{
+        display: flex;
+        padding-left: 15px;
+        justify-content: flex-end;
+        align-content: center;
+        padding-right: 30px;
+    }
+    .right_one, .right_two{
+        display: flex;
+        align-content: center;
+    }
+    #nav_bar{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 13px;
+        font-family: arial, sans-serif;
+        padding-top: 15px;
+        justify-content: space-between;  
+    }
+
+    #more_apps{
+        background-image: url('https://ssl.gstatic.com/gb/images/i1_1967ca6a.png');
+        background-size: 528px x 68px;
+        background-position: -132px -38px;
+        display: inline-block;
+        box-sizing: border-box;
+        height: 30px;
+        width: 30px;
+        vertical-align: middle;
+        opacity: .5;
+    }
+
+    #sign_in{
+        display: inline-block;
+        padding: 0 12px;
+        position: relative;
+        background-color: #4285f4;
+        color: white;
+        font-weight: bold;
+        display:inline-block;
+        line-height: 28px;
+        border-radius: 1px;
+    }
+    #search_area{
+        display: flex;
+        justify-content: center;
+    }
+
+</style>
+<body>
+    <header id="nav_bar">
+        <div class="left">
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwi--pignsfrAhV3HjQIHaLzDAcQkNQCCAM&url=https%3A%2F%2Fabout.google%2F%3Ffg%3D1%26utm_source%3Dgoogle-US%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&usg=AOvVaw13L0SpN0L7ycx9R0_i4R2S"
+             id="about">About</a>
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwi--pignsfrAhV3HjQIHaLzDAcQpMwCCAQ&url=https%3A%2F%2Fstore.google.com%2FUS%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-US&usg=AOvVaw0wvkRBURf91YdMQCXOelDf"
+             id="store">Store</a>
+        </div>
+        <div class="right">
+            <div class="right_one">
+                <a href="https://mail.google.com/mail/?tab=wm&ogbl" id="Gmail">Gmail</h1>
+                <a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl" id="images">images</h1>
+            </div>
+            <div class="right_two">
+                <a href = "https://www.google.com/intl/en/about/products?tab=wh"
+                id="more_apps"></a>
+                <a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ"
+                 id="Sign_in">Sign in</a>
+            </div>
+        </div>
+     </header>
+     <main id="search_area">
+         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
+         alt="googlelogo" style="padding-top:109px" width="272" height="92" syle="center">
+         <div id="search_form"></div>
+     </main>
+    
+</body>
