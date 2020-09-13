@@ -75,27 +75,73 @@
         align-content: center;
         
     }
+    #search_bar{
+        display: flex;
+        flex: 1 1 0;
+        align-items: center;
+    }
+
+    #search_text:hover {
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+        border-color: rgba(223,225,229,0);
+    }
+
     #search_text{
         background: #fff;
         display: flex;
         border: 1px solid #dfe1e5;
         border-radius: 24px;
         margin-top: 30px;
+        margin-bottom: 20px;
         height: 44px;
         min-width: 500px;
         max-width: 800px;
         width: auto;
         background-color: white;
         background-image: url('searchicon.png');
+        background-size: 20px 20px;
         background-position: 10px 10px;
         background-repeat: no-repeat;
         padding-left: 40px;
     }
 
-    .button{
-        margin-top: 30px;
+    #buttons{
         display: flex;
-        justify-items: center;
+        justify-content: center;
+        line-height: 27px;
+    }
+    button{
+        background-color: #f2f2f2;
+        border: 1px solid #f2f2f2;
+        margin: 13px 4px;
+        padding: 0px 16px;
+        border-radius: 4px;
+        height: 36px;
+        min-width: 54px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+    li{
+        display: flex;
+        float: left;
+        font-size: 14px;
+    }
+
+    footer {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position:fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f2f2f2;
+        border-top: 1px solid #e4e4e4;
+        text-align: center;
+        font-family: arial,sans-serif;
+        line-height: 40px;
     }
 
 
@@ -124,12 +170,33 @@
      <main id="search_area" style="center">
          <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
          alt="googlelogo" style="padding-top:109px" width="272" height="92" syle="center">
-         <form id="search_form">
-             <input type="text" id="search_text" name="search_name">
-             <button type="button" id="google_search" name="submit_btn">Google Search</button>
-             <button type="button" id="feeling_lucky" name="lucky_btn">I'm Feeling Lucky</button>
-         </form>
+         <form id="search_form" action="https://www.google.com/search" method="GET">
+            <div class="search-area">
+                <div id="search_bar">
+                    <input type="text" id="search_text" name="search_name">
+                </div>
+             <div id="buttons">
+                <button type="submit" id="google_search" name="submit_btn">Google Search</button>
+                <button type="submit" id="feeling_lucky" name="lucky_btn">I'm Feeling Lucky</button>
+            </div>
+        </form>
 
      </main>
+     <footer>
+         <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjekdz6xOXrAhUNqJ4KHfNxCpQQkdQCCBY&url=https%3A%2F%2Fwww.google.com%2Fintl%2Fen_us%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw3XLzhicA5ZZW0afDbW0l2T">
+            Advertising</a></li>
+         <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjekdz6xOXrAhUNqJ4KHfNxCpQQktQCCBc&url=https%3A%2F%2Fwww.google.com%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw2SJ4zwRVXKyZr53qG9dm4K">
+            Business</a></li>
+        <li><a href="https://google.com/search/howsearchworks/?fg=1">
+            How Search Works</a></li>
+        <li style="float:right; margin-right: 10px;"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjekdz6xOXrAhUNqJ4KHfNxCpQQzq0CCBQ&url=https%3A%2F%2Fwww.google.com%2Fpreferences%3Fhl%3Den&usg=AOvVaw0XvhSqpc_GFt9aG_mRLp1F">
+            Settings</a></li>
+        <li style="float:right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjekdz6xOXrAhUNqJ4KHfNxCpQQ8qwCCBM&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Fhl%3Den%26fg%3D1&usg=AOvVaw2d8Ahs2oc0jxVOgPfpr4Fe">
+                Terms</a></li>
+        <li style="float:right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjekdz6xOXrAhUNqJ4KHfNxCpQQ8awCCBI&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Fhl%3Den%26fg%3D1&usg=AOvVaw25lN6TjyY2uszSImdhMejE">
+            Privacy</a></li>
+
+
+     </footer>
     
 </body>
